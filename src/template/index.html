@@ -1,49 +1,122 @@
 {% extends './layout/_layout.html' %}
 
 {% set title = "Главная" %}
+{% set items = [
+  "Html5", 
+  "Sass",
+  "vanillajs",
+  "git",
+  "CSS3",
+  "Less",
+  "angular",
+  "foundation",
+  "БЭМ",
+  "Gulp",
+  "jquery",
+  "Bootstrap"] %}
 
 {% block content %}
-  <main>
-    <div class="container">
-    <h1 class="title">MAIN</h1>
-    <div class="block-wrapp clearfix">
-      <div class="block-1">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Eum id ad blanditiis tenetur itaque illum quam at aliquam voluptatum quisquam,
-          maxime sint modi tempora recusandae ut quod maiores a sit distinctio.
-          Soluta voluptatum nostrum quae natus nihil eveniet rem nulla, tempore,
-          id earum tenetur officiis aliquam. Rem veniam aspernatur quos expedita omnis
-          soluta officia officiis iste, repellat explicabo ratione tenetur facilis,
-          consequatur at aliquam molestias doloremque tempore necessitatibus recusandae,
-          odio tempora! Deserunt, error!
-        </p>
+  <div class="wrapper">
+    <main>
+      <div class="container">
+        <div class="info">
+          <div class="info-left">
+            <div class="info-avatar__wrapp-img">
+              <img src="./assets/img/Avatar.jpg" alt="Avatar" class="info-avtar__img">
+            </div>
+          </div>
+          <div class="info-right">
+            <div class="info-about__wrapp">
+              <div class="info-about">
+                  <ul class="info-about__list">
+                    <li class="info-about__item">Евгений</li>
+                    <li class="info-about__item">8 июня 1985</li>
+                    <li class="info-about__item">Киев</li>
+                    <li class="info-about__item">eshereverov@gmail.com</li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="stamp">
+            <img src="./assets/img/stamp.png" alt="stamp" class="stamp-img">
+          </div>
+        </div> 
       </div>
-      <div class="block-text">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Eum id ad blanditiis tenetur itaque illum quam at aliquam voluptatum quisquam,
-          maxime sint modi tempora recusandae ut quod maiores a sit distinctio.
-          Soluta voluptatum nostrum quae natus nihil eveniet rem nulla, tempore,
-          id earum tenetur officiis aliquam. Rem veniam aspernatur quos expedita omnis
-          soluta officia officiis iste, repellat explicabo ratione tenetur facilis,
-          consequatur at aliquam molestias doloremque tempore necessitatibus recusandae,
-          odio tempora! Deserunt, error!
-        </p>
+      <div class="container">
+        <div class="skills">
+          <div class="skills-title">Навыки</div>
+          <ul class="skills-list">
+            {% for item in items %}
+              <li class="skils-item">
+                <label class="skils-item__label" for="{{ item }}">
+                  <input class="skils-item__input" type="checkbox" name="" id="{{ item }}">
+                  <span class="skils-item__input--fake">
+                    <svg class="skils-item__input-img" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 26 26">
+                      <path d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z"/>
+                    </svg>
+                  </span>
+                  <span class="skils-item__text">
+                    {{ item }}
+                  </span>
+                </label>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
-      <div class="block-2">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Eum id ad blanditiis tenetur itaque illum quam at aliquam voluptatum quisquam,
-          maxime sint modi tempora recusandae ut quod maiores a sit distinctio.
-          Soluta voluptatum nostrum quae natus nihil eveniet rem nulla, tempore,
-          id earum tenetur officiis aliquam. Rem veniam aspernatur quos expedita omnis
-          soluta officia officiis iste, repellat explicabo ratione tenetur facilis,
-          consequatur at aliquam molestias doloremque tempore necessitatibus recusandae,
-          odio tempora! Deserunt, error!
-        </p>
+      <div class="container">
+        <div class="skill-js">
+          <div class="skill-js__left">
+            <svg class="skill-js__img"
+                 xmlns:dc="http://purl.org/dc/elements/1.1/"
+                 xmlns:cc="http://creativecommons.org/ns#"
+                 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                 xmlns:svg="http://www.w3.org/2000/svg"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                 xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                 viewBox="0 0 261.63614 133.13972">
+              <g  id="layer1"
+                  transform="translate(0.06914655,-166.09404)">
+                <path
+                    id="green"
+                    d="m 53.904732,192.57148 a 132.27653,132.27653 0 0 1 151.794638,-1.85743 l -35.38477,45.24303 c -15.41232,-10.13648 -27.53358,-12.36509 -40.11605,-12.21112 -12.55024,0.15357 -27.20603,4.87021 -39.76883,13.18863 z"
+                    class="colors colors--green"
+                    inkscape:connector-curvature="0"
+                    style="fill-rule:evenodd;stroke-width:1.04107201" />
+                <path
+                    id="orange"
+                    d="M -0.07424508,300.41779 A 131.88496,131.88496 0 0 1 50.233214,195.26246 l 37.09345,43.97758 c -19.384616,15.59715 -29.411347,33.87892 -29.086037,60.46418 z"
+                    class="colors colors--orange"
+                    inkscape:connector-curvature="0"
+                    style="fill-rule:evenodd;stroke-width:1.04909575" />
+                <path
+                    id="blue"
+                    d="m 208.90005,192.79172 a 136.34668,136.34668 0 0 1 52.66618,106.44205 l -58.01299,0.70987 C 203.22001,272.71071 191.807,253.4439 173.2642,238.7417 Z"
+                    class="colors colors--blue"
+                    inkscape:connector-curvature="0"
+                    style="fill-rule:evenodd;stroke-width:1.07465363" />
+              </g>
+            </svg>
+            <img id="arrow-img" src="./assets/img/arrow.png" alt="" class="arrow-img">
+          </div>
+          <div class="skill-js__right">
+              <div class="skill-js__title">
+                <div>Мой уровень владения</div>
+                <div>Java Script</div>
+              </div>
+              <div class="skill-js__input-wrapp">
+                <input value="20"
+                       type="text"
+                       id="skill-js__input"
+                       class="skill-js__input"
+                       maxlength="3"
+                       title="введите число не больше 100">
+                <span class="skill-js__input">%</span>
+              </div>
+          </div>
+        </div>
       </div>
-    </div>      
-    </div>
-  </main>
+    </main>
+  </div>
 {% endblock %}
