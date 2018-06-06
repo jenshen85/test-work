@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "set NODE_ENV=development&& gulp",
+    "dev": "npm run start",
     "build": "set NODE_ENV=production&& gulp build"
   },
   "keywords": [],
