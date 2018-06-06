@@ -16,7 +16,6 @@ list.addEventListener("change", () => {
     };
   }
   deg = (checkedArr.length / allCheck) * 100;
-  console.log(deg);
   arrow.style.transform = `translateX(-50%) rotate(${ deg * 1.8 }deg)`;
   inputJs.value = Math.trunc(deg);
   return checkedArr;
